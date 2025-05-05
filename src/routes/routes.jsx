@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ErrorPage from "../pages/ErrorPage";
+import SubscriptionDetails from "../pages/SubscriptionDetails";
 
 const router=createBrowserRouter([
     {
@@ -13,7 +14,8 @@ const router=createBrowserRouter([
         children: [
             {
                 index: true,
-                Component: Home
+                Component: Home,
+                loader: ()=> fetch('../ProductData.json')
             },
             {
                 path:'/login',
@@ -22,6 +24,10 @@ const router=createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/SubscriptionDetails/:id',
+                element: <SubscriptionDetails></SubscriptionDetails>
             }
         ]
     },
