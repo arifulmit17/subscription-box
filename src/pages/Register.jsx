@@ -1,20 +1,23 @@
-import React from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './../Firebase.init';
+import React, { use } from 'react';
 import { NavLink } from 'react-router';
+import { AuthContext } from '../Contexts/AuthContext';
 const Register = () => {
+
+    const {createUser}=use(AuthContext)
+    
     const handleRegister=e=>{
         e.preventDefault();
         const email=e.target.email.value;
         const password=e.target.password.value;
-        console.log(email,password);
-        createUserWithEmailAndPassword(auth,email,password)
-        .then(result=>{
-          console.log(result)}
-        ).catch(error=>{
-          console.log(error);
-        })
+        const name=e.target.name.value;
+        console.log(name,email,password);
         
+        createUser(email,password)
+        .then(result=>{
+            console.log(result)}
+          ).catch(error=>{
+            console.log(error);
+          })
     }
 
     return (
@@ -22,7 +25,7 @@ const Register = () => {
           <h1 className='font-bold text-4xl my-5'>Please, Register Now !</h1>
             <form className='space-y-4' onSubmit={handleRegister} >
               {/* Username */}
-              <input type="text" placeholder="Username " className="input" />
+              <input type="text" name='name' placeholder="Username " className="input" />
  {/* Email input */}
  
     <label className="input validator join-item">

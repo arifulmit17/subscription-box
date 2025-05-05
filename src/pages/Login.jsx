@@ -1,9 +1,11 @@
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import React from 'react';
+import React, { use } from 'react';
 import { NavLink } from 'react-router';
 import { auth } from '../Firebase.init';
+import { AuthContext } from '../Contexts/AuthContext';
 
 const Login = () => {
+	const {LoginUser}=use(AuthContext)
 	const provider=new GoogleAuthProvider()
 
 	const handleGoogleSignIn=()=>{
@@ -14,6 +16,19 @@ const Login = () => {
 			console.log(error);
 		})
 	}
+
+	const handleLogin=e=>{
+		e.preventDefault();
+		const email=e.target.email.value;
+		const password=e.target.password.value;
+		LoginUser(email,password).then(result=>{
+			console.log(result.user);
+		}).catch(error=>{
+			console.log(error);
+		})
+	}
+
+
     return (
         <div className="w-full mx-auto max-w-md p-4 rounded-md shadow sm:p-8">
 	<h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
@@ -34,7 +49,7 @@ const Login = () => {
 		<p className="px-3 dark:text-gray-600">OR</p>
 		<hr  className="w-full dark:text-gray-600" />
 	</div>
-	<form noValidate="" action="" className="space-y-8">
+	<form onSubmit={handleLogin} noValidate="" action="" className="space-y-8">
 		<div className="space-y-4">
 			<div className="space-y-2">
 				<label htmlFor="email" className="block text-sm">Email address</label>
@@ -49,7 +64,7 @@ const Login = () => {
 			</div>
             
 		</div>
-		<button type="button" className="w-full px-8 py-3 font-semibold rounded-md btn">Sign in</button>
+		<button  type="Submit" className="w-full px-8 py-3 font-semibold rounded-md btn">Sign in</button>
 	</form>
 </div>
     );

@@ -1,7 +1,21 @@
-import React from 'react';
-import { NavLink } from 'react-router';
+import React, { use } from 'react';
+import { Link, NavLink } from 'react-router';
 import './Navbar.css'
+import { AuthContext } from '../../Contexts/AuthContext';
+
 const Navbar = () => {
+    const {user, LogOutUser}=use(AuthContext);
+    console.log(user);
+
+    const handleLogout=()=>{
+      LogOutUser().then(()=>{
+        console.log('signout successful');
+      })
+      .catch(error=>{
+        console.log(error);
+      })
+    }
+
     const links=<>
     <li><NavLink to={'/'}>Home</NavLink></li>
     <li><NavLink to={'/login'}>Login</NavLink></li>
@@ -20,7 +34,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">Subscriber-Store</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -28,12 +42,15 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <div className="w-10 rounded-full">
+  
+    {user? <>
+      <div className="w-10 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
-    <NavLink to={'/login'} className="btn">Login</NavLink>
+      <a onClick={handleLogout} className='btn'>Log out</a>
+    </> : <Link to={'/login'}>Login</Link>}
   </div>
 </div>
     );
