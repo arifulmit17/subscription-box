@@ -1,0 +1,140 @@
+[
+    {
+      "id": 1,
+      "name": "Smart Home Box",
+      "thumbnail": "https://example.com/images/smart-home-box-thumbnail1.jpg",
+      "banner": "https://example.com/images/smart-home-box-banner.jpg",
+      "frequency": "Yearly",
+      "price": 199.99,
+      "description": "Transform your home into a smart home with curated smart devices, home automation products, and IoT gadgets.",
+      "tech_category": "Smart Home",
+      "features": [
+        "Smart Home Devices",
+        "Home Automation Tools",
+        "Cutting-edge IoT Gadgets"
+      ],
+      "subscription_benefits": [
+        "Discount on Future Smart Home Purchases",
+        "Exclusive Smart Home Tutorials",
+        "Early Access to Product Releases"
+      ],
+      "ratings": 4.8,
+      "number_of_reviews": 315
+    },
+    {
+      "id": 2,
+      "name": "Ultimate Gaming Kit",
+      "thumbnail": "https://example.com/images/gaming-kit-thumbnail2.jpg",
+      "banner": "https://example.com/images/gaming-kit-banner.jpg",
+      "frequency": "Monthly",
+      "price": 299.99,
+      "description": "The ultimate gaming experience with high-performance peripherals, gaming accessories, and exclusive content.",
+      "tech_category": "Gaming",
+      "features": [
+        "Pro Gaming Headset",
+        "Mechanical Keyboard",
+        "High-Precision Mouse",
+        "Limited Edition Game DLC"
+      ],
+      "subscription_benefits": [
+        "Access to Beta Game Releases",
+        "Exclusive In-Game Items",
+        "Monthly Gaming Tournament Entry"
+      ],
+      "ratings": 4.9,
+      "number_of_reviews": 280
+    },
+    {
+      "id": 3,
+      "name": "Productivity Plus Pack",
+      "thumbnail": "https://example.com/images/productivity-pack-thumbnail3.jpg",
+      "banner": "https://example.com/images/productivity-pack-banner.jpg",
+      "frequency": "Quarterly",
+      "price": 149.99,
+      "description": "Boost your productivity with essential software, ergonomic tools, and productivity gadgets.",
+      "tech_category": "Productivity",
+      "features": [
+        "Ergonomic Keyboard and Mouse",
+        "Premium Task Management Software",
+        "Noise-Cancelling Headphones",
+        "Standing Desk Converter"
+      ],
+      "subscription_benefits": [
+        "Software Upgrade Discounts",
+        "Productivity Training Webinars",
+        "Priority Customer Support"
+      ],
+      "ratings": 4.7,
+      "number_of_reviews": 245
+    },
+    {
+      "id": 4,
+      "name": "Creative Creator Studio",
+      "thumbnail": "https://example.com/images/creator-studio-thumbnail4.jpg",
+      "banner": "https://example.com/images/creator-studio-banner.jpg",
+      "frequency": "Monthly",
+      "price": 249.99,
+      "description": "Empower your creativity with professional-grade tools for content creation, including software, hardware, and resources.",
+      "tech_category": "Content Creation",
+      "features": [
+        "4K Webcam",
+        "Studio Microphone",
+        "Video Editing Software",
+        "Graphic Design Suite"
+      ],
+      "subscription_benefits": [
+        "Exclusive Content Creation Tutorials",
+        "Access to Creator Community",
+        "Software Add-ons and Plugins"
+      ],
+      "ratings": 4.8,
+      "number_of_reviews": 260
+    },
+    {
+      "id": 5,
+      "name": "Fitness Fanatic Bundle",
+      "thumbnail": "https://example.com/images/fitness-bundle-thumbnail5.jpg",
+      "banner": "https://example.com/images/fitness-bundle-banner.jpg",
+      "frequency": "Quarterly",
+      "price": 179.99,
+      "description": "Enhance your fitness journey with wearable tech, fitness equipment, and personalized coaching resources.",
+      "tech_category": "Fitness",
+      "features": [
+        "Smart Fitness Tracker",
+        "Wireless Sport Earbuds",
+        "Portable Exercise Kit",
+        "Fitness App Subscription"
+      ],
+      "subscription_benefits": [
+        "Personalized Workout Plans",
+        "Nutrition Guides",
+        "Virtual Fitness Classes"
+      ],
+      "ratings": 4.6,
+      "number_of_reviews": 220
+    },
+    {
+      "id": 6,
+      "name": "Travel Tech Essentials",
+      "thumbnail": "https://example.com/images/travel-tech-thumbnail6.jpg",
+      "banner": "https://example.com/images/travel-tech-banner.jpg",
+      "frequency": "Yearly",
+      "price": 129.99,
+      "description": "The perfect tech for the modern traveler, including portable gadgets, travel adapters, and security accessories.",
+      "tech_category": "Travel",
+      "features": [
+        "Universal Travel Adapter",
+        "Portable Wi-Fi Hotspot",
+        "Noise-Cancelling Earbuds",
+        "Smart Luggage Tracker"
+      ],
+      "subscription_benefits": [
+        "Travel Tech Discounts",
+        "Priority Access to New Travel Products",
+        "Travel Tips and Guides"
+      ],
+      "ratings": 4.5,
+      "number_of_reviews": 205
+    }
+  ]
+  
