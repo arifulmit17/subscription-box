@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { use } from 'react';
+import { AuthContext } from '../Contexts/AuthContext';
 
 const UserProfile = () => {
+    const {user}=use(AuthContext)
     return (
         <div>
-            This is user profile
+            
+
+            <h1>User email: {user.email}</h1>
         </div>
     );
 };

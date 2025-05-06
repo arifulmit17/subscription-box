@@ -1,10 +1,11 @@
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import React, { use } from 'react';
-import { NavLink } from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
 import { auth } from '../Firebase.init';
 import { AuthContext } from '../Contexts/AuthContext';
 
 const Login = () => {
+	const navigate=useNavigate();
 	const {LoginUser}=use(AuthContext)
 	const provider=new GoogleAuthProvider()
 
@@ -12,6 +13,7 @@ const Login = () => {
 		console.log('signed in');
 		signInWithPopup(auth,provider).then(result=>{
 			console.log(result);
+			
 		}).catch(error=>{
 			console.log(error);
 		})
@@ -23,6 +25,7 @@ const Login = () => {
 		const password=e.target.password.value;
 		LoginUser(email,password).then(result=>{
 			console.log(result.user);
+			navigate('/')
 		}).catch(error=>{
 			console.log(error);
 		})

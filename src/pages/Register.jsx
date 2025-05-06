@@ -1,10 +1,13 @@
-import React, { use } from 'react';
-import { NavLink } from 'react-router';
+import React, { use, useState } from 'react';
+import { NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../Contexts/AuthContext';
-const Register = () => {
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
+const Register = () => {
+    const navigate=useNavigate();
     const {createUser}=use(AuthContext)
-    
+    const [showpassword, setShowpassword]=useState(false)
     const handleRegister=e=>{
         e.preventDefault();
         const email=e.target.email.value;
@@ -14,7 +17,10 @@ const Register = () => {
         
         createUser(email,password)
         .then(result=>{
-            console.log(result)}
+            console.log(result)
+            navigate('/')
+          }
+            
           ).catch(error=>{
             console.log(error);
           })
@@ -26,6 +32,30 @@ const Register = () => {
             <form className='space-y-4' onSubmit={handleRegister} >
               {/* Username */}
               <input type="text" name='name' placeholder="Username " className="input" />
+              {/* PhotoUrl */}
+              <label className="input validator">
+  <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      strokeLinejoin="round"
+      strokeLinecap="round"
+      strokeWidth="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </g>
+  </svg>
+  <input
+    type="url"
+    
+    placeholder="https://"
+    
+    pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9\-].*[a-zA-Z0-9])?\.)+[a-zA-Z].*$"
+    title="Must be valid URL"
+  />
+</label>
+<p className="validator-hint">Must be valid URL</p>
  {/* Email input */}
  
     <label className="input validator join-item">
@@ -62,8 +92,9 @@ const Register = () => {
       <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
     </g>
   </svg>
+  <div className='relative'>
   <input
-    type="password"
+    type={showpassword ? 'text' : 'password'}
     name='password'
     required
     placeholder="Password"
@@ -71,6 +102,15 @@ const Register = () => {
     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
     title="Must be more than 6 characters, including number, lowercase letter, uppercase letter"
   />
+
+  <button onClick={()=>{setShowpassword(!showpassword)}} className='btn btn-xs absolute left-60'>
+  {
+    showpassword ? <FaEyeSlash />
+    : <FaEye />
+  }
+  </button>
+  </div>
+  
 </label>
 <p className="validator-hint hidden">
   Must be more than 6 characters, including
