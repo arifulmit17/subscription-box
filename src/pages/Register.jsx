@@ -13,7 +13,8 @@ const Register = () => {
         const email=e.target.email.value;
         const password=e.target.password.value;
         const name=e.target.name.value;
-        console.log(name,email,password);
+        const photo=e.target.photo.value;
+        console.log(name,email,password,photo);
         
         createUser(email,password)
         .then(result=>{
@@ -50,7 +51,7 @@ const Register = () => {
     type="url"
     
     placeholder="https://"
-    
+    name='photo'
     pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9\-].*[a-zA-Z0-9])?\.)+[a-zA-Z].*$"
     title="Must be valid URL"
   />
