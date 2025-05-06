@@ -8,7 +8,7 @@ const Item = ({item}) => {
 
         <div className="card w-96 bg-base-100 shadow-sm">
   <div className="card-body">
-    <img src={banner} alt="" />
+    <img className='w-full h-[200px]' src={banner} alt="" />
     <span className="badge badge-xs badge-warning">{tech_category}</span>
     <div className="flex justify-between">
       <h2 className="text-3xl font-bold">{name}</h2>

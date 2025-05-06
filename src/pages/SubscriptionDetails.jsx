@@ -17,17 +17,17 @@ const SubscriptionDetails = () => {
         features,
         tech_category}=singleService
     return (
-        <div className="card mx-auto bg-base-100 w-96 shadow-sm">
+        <div className="card my-20 mx-auto bg-base-100 w-96 shadow-sm">
             
   <figure>
     <img
       src={thumbnail}
-      alt="gaming kit" />
+      alt="service" />
   </figure>
   <div className="card-body">
     <h2 className="card-title">
       {name}
-      <div className="badge badge-secondary">{tech_category}</div>
+      <div className="badge badge-soft badge-accent">{tech_category}</div>
     </h2>
 
     <p>{description}</p>
@@ -57,7 +57,7 @@ const SubscriptionDetails = () => {
     </div>
     
     <div className="card-actions justify-end">
-      <button className='btn'>Order Now</button>
+      <button className='btn btn-soft btn-accent'>Subscribe Now</button>
       
     </div>
   </div>

@@ -52,7 +52,8 @@ const Navbar = () => {
       <div className="w-10">
           <img className='rounded-full'
             alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            
+            src={`${user? user.photoURL: 'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp'}`} />
         </div>
       <a onClick={handleLogout} className='btn'>Log out</a>
     </> : <Link to={'/login'}>Login</Link>}
