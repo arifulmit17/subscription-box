@@ -8,7 +8,7 @@ import hbo from '../assets/hbo.png'
 import Tsports from '../assets/TSports.png'
 import Youtube from '../assets/youtube.jpg'
 
-import  { useRef, useState } from "react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -57,13 +57,35 @@ const Home = () => {
         </SwiperSlide>
       </Swiper>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
             {
                 data.map(item=><Item key={item.id} item={item}></Item> )
             }
             </Suspense>
             
+        </div>
+        <div>
+            <section className='w-11/12 mt-10 mx-auto '>
+                <h1 className='text-center text-4xl font-bold'>F.A.Q</h1>
+                <div>
+                <div className="collapse collapse-arrow bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-2" defaultChecked />
+  <div className="collapse-title font-semibold">How do I create an account?</div>
+  <div className="collapse-content text-sm">Click the "Register" button in the top  and follow the registration process.</div>
+</div>
+<div className="collapse collapse-arrow bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-2" />
+  <div className="collapse-title font-semibold">I forgot my password. What should I do?</div>
+  <div className="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+</div>
+<div className="collapse collapse-arrow bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-2" />
+  <div className="collapse-title font-semibold">How do I update my profile information?</div>
+  <div className="collapse-content text-sm">Go to profile page and give new information and click update to make changes.</div>
+</div>
+                </div>
+            </section>
         </div>
         </div>
         
