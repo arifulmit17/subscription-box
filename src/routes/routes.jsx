@@ -31,7 +31,9 @@ const router=createBrowserRouter([
                 path: '/SubscriptionDetails/:id',
                 element: <PrivateRoutes>
                     <SubscriptionDetails></SubscriptionDetails>
-                </PrivateRoutes>
+                </PrivateRoutes>,
+                loader: ()=> fetch('../ProductData.json')
+                
                 
             },
             {

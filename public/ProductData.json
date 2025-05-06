@@ -2,8 +2,8 @@
     {
       "id": 1,
       "name": "Smart Home Box",
-      "thumbnail": "https://example.com/images/smart-home-box-thumbnail1.jpg",
-      "banner": "https://example.com/images/smart-home-box-banner.jpg",
+      "thumbnail": "https://i.postimg.cc/WpBXg9g9/IMICE-GK-480-Gaming-Combo-500x500.jpg",
+      "banner": "https://i.postimg.cc/FKHZNwXK/images.jpg",
       "frequency": "Yearly",
       "price": 199.99,
       "description": "Transform your home into a smart home with curated smart devices, home automation products, and IoT gadgets.",
@@ -24,8 +24,8 @@
     {
       "id": 2,
       "name": "Ultimate Gaming Kit",
-      "thumbnail": "https://example.com/images/gaming-kit-thumbnail2.jpg",
-      "banner": "https://example.com/images/gaming-kit-banner.jpg",
+      "thumbnail": "https://i.postimg.cc/WpBXg9g9/IMICE-GK-480-Gaming-Combo-500x500.jpg",
+      "banner": "https://i.postimg.cc/FKHZNwXK/images.jpg",
       "frequency": "Monthly",
       "price": 299.99,
       "description": "The ultimate gaming experience with high-performance peripherals, gaming accessories, and exclusive content.",
