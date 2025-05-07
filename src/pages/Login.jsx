@@ -3,6 +3,7 @@ import React, { use } from 'react';
 import { NavLink, useNavigate } from 'react-router';
 import { auth } from '../Firebase.init';
 import { AuthContext } from '../Contexts/AuthContext';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
 	const navigate=useNavigate();
@@ -34,6 +35,9 @@ const Login = () => {
 
     return (
         <div className="w-full mx-auto max-w-md p-4 rounded-md shadow sm:p-8">
+			<Helmet>
+            <title>Login</title>
+        	</Helmet>
 	<h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
 	<p className="text-sm text-center dark:text-gray-600">Dont have account?
 		<NavLink to={'/register'} className="focus:underline hover:underline"> Register here</NavLink>

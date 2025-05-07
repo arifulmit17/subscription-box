@@ -23,11 +23,17 @@ import 'swiper/css/pagination';
 import './styles.css';
 
 import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { Helmet } from 'react-helmet';
 const Home = () => {
     const data=useLoaderData();
     
     return (
         <div>
+            <Helmet>
+                <title>
+                    Subscription-box | Home
+                </title>
+            </Helmet>
             <div>
             <Swiper
         spaceBetween={30}

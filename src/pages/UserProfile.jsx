@@ -3,6 +3,7 @@ import { AuthContext } from '../Contexts/AuthContext';
 import swal from 'sweetalert';
 import Navbar from '../Components/Navbar/Navbar';
 import Footer from '../Components/Footer';
+import { Helmet } from 'react-helmet';
 const UserProfile = () => {
     const {user,setUser,updateUser}=use(AuthContext)
     const handleUpdate=e=>{
@@ -20,6 +21,9 @@ const UserProfile = () => {
     }
     return (
         <>
+        <Helmet>
+            <title>Profile</title>
+        </Helmet>
         <Navbar></Navbar>
         <div className='w-9/12 bg-base-400 m-10 mx-auto flex gap-20'>
             <img className='size-[300px] rounded-2xl' src={user.photoURL} alt="" />

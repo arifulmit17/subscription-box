@@ -38,7 +38,11 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
+    <div className='flex'>
+      <img src={'sub.png'} alt="" />
     <a className="btn btn-ghost text-xl">Subscription-box</a>
+    </div>
+    
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -50,10 +54,13 @@ const Navbar = () => {
     {user? <>
       <h1>{user.email}</h1>
       <div className="w-10">
-          <img className='rounded-full'
+      
+          <img className='rounded-full myDIV'
             alt="Tailwind CSS Navbar component"
             
             src={`${user? user.photoURL: 'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp'}`} />
+        <div className="hide">{user.displayName}</div>
+        
         </div>
       <a onClick={handleLogout} className='btn'>Log out</a>
     </> : <Link to={'/login'}>Login</Link>}

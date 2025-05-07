@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../Contexts/AuthContext';
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
     const navigate=useNavigate();
@@ -34,8 +35,12 @@ const Register = () => {
     }
 
     return (
+      
         <div className='max-w-sm mx-auto my-12'>
-          <h1 className='font-bold text-4xl my-5'>Please, Register Now !</h1>
+          <Helmet>
+            <title>Register</title>
+        </Helmet>
+          <h1 className='font-bold text-4xl my-5'>Please,Register Now !</h1>
             <form className='space-y-4' onSubmit={handleRegister} >
               {/* Username */}
               <input type="text" name='name' placeholder="Username " className="input" />
