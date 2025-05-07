@@ -45,6 +45,11 @@ const Home = () => {
         modules={[EffectFade, Navigation, Pagination]}
         className="mySwiper"
       >
+
+
+          <SwiperSlide>
+          <img src={apple} />
+        </SwiperSlide>
         <SwiperSlide>
           <img src={netflix} />
         </SwiperSlide>
@@ -57,9 +62,7 @@ const Home = () => {
         <SwiperSlide>
           <img src={Youtube} />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src={apple} />
-        </SwiperSlide>
+        
         <SwiperSlide>
           <img src={hbo} />
         </SwiperSlide>
@@ -81,7 +84,7 @@ const Home = () => {
                 <div className='w-5/12 '>
                     <img className='md:w-[500px] rounded-2xl' src={Member} alt="" />
                 </div>
-                <div className='w-7/12 m-5'>
+                <div className='w-7/12 mx-5 mb-5'>
                     <h1 className='text-lg md:text-xl lg:text-2xl font-semibold'>Member's Benefit</h1>
                     <p className='text-base md:text-lg lg:text-xl '>Our site focuses on creating a unique experience for our valued members through giving some opportunities that is rare in the subscription market. Benefits include.</p>
                     <ol className='h-1/2 mt-3 flex flex-col justify-between'>
@@ -92,7 +95,7 @@ const Home = () => {
                       <li>3. Each box is curated with items tailored to the user’s interests, ensuring that they receive something new and exciting each month</li>
                     </ol>
                       
-                     <button className='text-white rounded-2xl btn bg-blue-700 btn-wide'><NavLink to={'/register'}>Register Now</NavLink></button>
+                     <button className='text-white ml-40 rounded-2xl btn bg-gray-400 btn-wide'><NavLink to={'/register'}>Register Now</NavLink></button>
                 </div>
             </div>
 

@@ -82,7 +82,7 @@ const Login = () => {
 			</div>
             
 		</div>
-		<button  type="Submit" className="w-full px-8 py-3 font-semibold rounded-md btn">Sign in</button>
+		<button  type="Submit" className="w-full px-8 py-3 text-white bg-gray-400 font-semibold rounded-md btn">Sign in</button>
 	</form>
 </div>
     );
