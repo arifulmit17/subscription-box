@@ -38,7 +38,7 @@ const Register = () => {
       
         <div className='max-w-sm mx-auto my-12'>
           <Helmet>
-            <title>Register</title>
+            <title>Subscription-box | Register</title>
         </Helmet>
           <h1 className='font-bold text-4xl my-5'>Please,Register Now !</h1>
             <form className='space-y-4' onSubmit={handleRegister} >

@@ -27,7 +27,7 @@ const Login = () => {
 		e.preventDefault();
 		const email=e.target.email.value;
 		const password=e.target.password.value;
-		LoginUser(email,password).then(result=>{
+		LoginUser(email,password).then(()=>{
 			swal('login successful')
 			navigate('/')
 		}).catch(error=>{
@@ -47,7 +47,7 @@ const Login = () => {
     return (
         <div className="w-full mx-auto max-w-md p-4 rounded-md shadow sm:p-8">
 			<Helmet>
-            <title>Login</title>
+            <title>Subscription-box | Login</title>
         	</Helmet>
 	<h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
 	<p className="text-sm text-center dark:text-gray-600">Dont have account?

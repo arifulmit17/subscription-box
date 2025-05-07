@@ -1,15 +1,15 @@
 import React, { use } from 'react';
-import { Link, NavLink } from 'react-router';
+import { NavLink } from 'react-router';
 import './Navbar.css'
 import { AuthContext } from '../../Contexts/AuthContext';
-
+import swal from 'sweetalert';
 const Navbar = () => {
     const {user, LogOutUser}=use(AuthContext);
 
 
     const handleLogout=()=>{
       LogOutUser().then(()=>{
-        console.log('signout successful');
+        swal('signout successful');
       })
       .catch(error=>{
         console.log(error);
@@ -66,7 +66,7 @@ const Navbar = () => {
         
         </div>
       <a onClick={handleLogout} className='btn'>Log out</a>
-    </> : <Link to={'/login'}>Login</Link>}
+    </> : <NavLink to={'/login'}>Login</NavLink>}
   </div>
 </div>
     );

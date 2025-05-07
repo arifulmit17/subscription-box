@@ -17,12 +17,10 @@ const SubscriptionDetails = () => {
     const itemData=useLoaderData();
     const {id}=useParams();
     const singleService= itemData.find(item=> item.id == id)
-    const {banner,
+    const {
         description,
         name,
-        number_of_reviews,
         subscription_benefits,
-        ratings,
         thumbnail,
         features,
         tech_category}=singleService

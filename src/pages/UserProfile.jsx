@@ -22,7 +22,7 @@ const UserProfile = () => {
     return (
         <>
         <Helmet>
-            <title>Profile</title>
+            <title>Subscription-box | Profile</title>
         </Helmet>
         <Navbar></Navbar>
         <div className='w-9/12 bg-base-400 m-10 mx-auto flex gap-20'>
