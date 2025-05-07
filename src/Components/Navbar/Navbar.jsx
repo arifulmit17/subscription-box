@@ -18,7 +18,10 @@ const Navbar = () => {
 
     const links=<>
     <li><NavLink to={'/'}>Home</NavLink></li>
-    <li><NavLink to={'/login'}>Login</NavLink></li>
+    
+    {!user && <>
+      <li><NavLink to={'/login'}>Login</NavLink></li>
+    </> }
     <li><NavLink to={'/register'}>Register</NavLink></li>
     {user && <>
       <li><NavLink to={'/userprofile'}>Profile</NavLink></li>
@@ -49,7 +52,7 @@ const Navbar = () => {
       {links}
     </ul>
   </div>
-  <div className="flex gap-4 navbar-end">
+  <div className="flex-col lg:flex-row  gap-4 navbar-end">
   
     {user? <>
       <h1>{user.email}</h1>

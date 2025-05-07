@@ -1,19 +1,22 @@
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import React, { use } from 'react';
+import { GoogleAuthProvider, sendPasswordResetEmail, signInWithPopup } from 'firebase/auth';
+import React, { use, useRef } from 'react';
 import { NavLink, useNavigate } from 'react-router';
 import { auth } from '../Firebase.init';
 import { AuthContext } from '../Contexts/AuthContext';
 import { Helmet } from 'react-helmet';
+import swal from 'sweetalert';
 
 const Login = () => {
 	const navigate=useNavigate();
 	const {LoginUser}=use(AuthContext)
 	const provider=new GoogleAuthProvider()
-
+	const emailref=useRef()
+	
 	const handleGoogleSignIn=()=>{
 		console.log('signed in');
 		signInWithPopup(auth,provider).then(result=>{
 			console.log(result);
+			swal('signin successful')
 			
 		}).catch(error=>{
 			console.log(error);
@@ -25,10 +28,18 @@ const Login = () => {
 		const email=e.target.email.value;
 		const password=e.target.password.value;
 		LoginUser(email,password).then(result=>{
-			console.log(result.user);
+			swal('login successful')
 			navigate('/')
 		}).catch(error=>{
-			console.log(error);
+			swal(error);
+		})
+	}
+
+	const handleForgetpassword=()=>{
+		console.log(emailref.current.value);
+		const email=emailref.current.value;
+		sendPasswordResetEmail(auth,email).then(()=>{
+			swal('Please check your email for resetting password link')
 		})
 	}
 
@@ -60,12 +71,12 @@ const Login = () => {
 		<div className="space-y-4">
 			<div className="space-y-2">
 				<label htmlFor="email" className="block text-sm">Email address</label>
-				<input type="email" name="email" id="email" placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+				<input type="email" ref={emailref} name="email" id="email" placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 			</div>
 			<div className="space-y-2">
 				<div className="flex justify-between">
 					<label htmlFor="password" className="text-sm">Password</label>
-					<a rel="noopener noreferrer" href="#" className="text-xs hover:underline dark:text-gray-600">Forgot password?</a>
+					<a onClick={handleForgetpassword} rel="noopener noreferrer" href="#" className="text-xs hover:underline dark:text-gray-600">Forgot password?</a>
 				</div>
 				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 			</div>

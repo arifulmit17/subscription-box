@@ -3,14 +3,14 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
-  <nav className="grid grid-flow-col gap-4">
+  <nav className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
     <a className="link link-hover">About us</a>
     <a className="link link-hover">Contact</a>
     <a className="link link-hover">Terms and Conditions</a>
     <a className="link link-hover">Privacy policy</a>
   </nav>
   <nav>
-    <div className="grid grid-flow-col gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <a>
         <svg
           xmlns="http://www.w3.org/2000/svg"

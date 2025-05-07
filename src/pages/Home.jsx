@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { useLoaderData } from 'react-router';
+import { NavLink, useLoaderData } from 'react-router';
 import Item from './Item';
 import netflix from '../assets/Netflix.png'
 import prime from '../assets/Prime.jpg'
@@ -77,12 +77,22 @@ const Home = () => {
         <div>
         <section className='my-10'>
             <h1 className='text-center text-3xl font-bold my-5'>Members Only</h1>
-            <div  className='w-11/12 mx-auto flex'>
+            <div  className='w-11/12 mx-auto lg:flex'>
                 <div className='w-5/12 '>
-                    <img className='rounded-2xl' src={Member} alt="" />
+                    <img className='md:w-[500px] rounded-2xl' src={Member} alt="" />
                 </div>
-                <div className='w-7/12'>
-                    <h1>Member's Benefit</h1>
+                <div className='w-7/12 m-5'>
+                    <h1 className='text-lg md:text-xl lg:text-2xl font-semibold'>Member's Benefit</h1>
+                    <p className='text-base md:text-lg lg:text-xl '>Our site focuses on creating a unique experience for our valued members through giving some opportunities that is rare in the subscription market. Benefits include.</p>
+                    <ol className='h-1/2 mt-3 flex flex-col justify-between'>
+                      <li>1. easily browse, subscribe to, and manage monthly subscription boxes based on their preferences</li>
+
+                      <li>2. A personalized experience where customers can select boxes for various products or services</li>
+
+                      <li>3. Each box is curated with items tailored to the user’s interests, ensuring that they receive something new and exciting each month</li>
+                    </ol>
+                      
+                     <button className='text-white rounded-2xl btn bg-blue-700 btn-wide'><NavLink to={'/register'}>Register Now</NavLink></button>
                 </div>
             </div>
 

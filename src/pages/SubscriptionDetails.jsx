@@ -7,10 +7,10 @@ const SubscriptionDetails = () => {
   const handleReview=(e)=>{
     e.preventDefault();
     const review=e.target.review.value;
-    const rating=e.target.rating.value;
-    console.log(review,rating);
-    setReviews([...reviews],review)
-    setRatings(rating)
+    const reviewRating=e.target.rating.value;
+    console.log(review,reviewRating);
+    setReviews([...reviews,review])
+    setRatings([...reviewRating,rating])
     
 
   }
@@ -27,21 +27,23 @@ const SubscriptionDetails = () => {
         features,
         tech_category}=singleService
     return (
-        <div className="card flex flex-row my-20 mx-auto bg-base-100 w-8/12 shadow-sm">
-       <div>
-       <figure>
-    <img className='w-[400px] mb-10'
+        <div className="card flex flex-row my-20 mx-auto bg-base-100 w-11/12 shadow-sm">
+    <div className='w-4/12'>
+    <figure>
+    <img className='w-[300px] mb-10'
       src={thumbnail}
       alt="service" />
   </figure>
   <form onSubmit={handleReview}>
     <input className='p-3' name='review' type="text" placeholder='review'/>
+    <br />
     <input className='p-3' name='rating' type="text" placeholder='rating'/>
+    <br />
     <button className='btn btn-accent'>Submit</button>
   </form>
         </div>     
   
-  <div className="card-body">
+  <div className="card-body w-4/12">
     <h2 className="card-title">
       {name}
       <div className="badge badge-soft badge-accent">{tech_category}</div>
@@ -79,17 +81,22 @@ const SubscriptionDetails = () => {
     </div>
     
   </div>
-  <div>
-    <div>
+  <div className='w-4/12 bg-base-200'>
+    <div className='h-1/2 ' >
     <h1>reviews</h1>
-    <h1>{console.log(reviews)}</h1>
+    <ul>
+      {reviews.map(review=><li className='bg-white p-2'>{review}</li>)}
+      </ul>
     </div>
-      <div>
+      
+    <div className='h-1/2 bg-base-200'>
         <h2>ratings</h2>
-        <h1>{rating}</h1>
+        <ul className='h-1/2 '>
+        {rating.map(rate=><li>rating: {rate}</li>)}
+        </ul>
       </div>
-
     </div>
+    
 </div>
     );
 };
