@@ -25,7 +25,7 @@ const UserProfile = () => {
             <title>Subscription-box | Profile</title>
         </Helmet>
         <Navbar></Navbar>
-        <div className='w-9/12 bg-base-400 m-10 mx-auto flex gap-20'>
+        <div className='w-9/12 bg-base-400 m-10 mx-auto lg:flex  gap-20'>
             <img className='size-[300px] rounded-2xl' src={user.photoURL} alt="" />
             <div className='bg-white w-full h-[300px] rounded-2xl'>
             <h1>User name: {user.displayName}</h1>
