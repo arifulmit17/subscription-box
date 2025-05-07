@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 
 const SubscriptionDetails = () => {
+  const [reviews,setReviews]=useState([])
+  const [rating,setRatings]=useState([])
+  const handleReview=(e)=>{
+    e.preventDefault();
+    const review=e.target.review.value;
+    const rating=e.target.rating.value;
+    console.log(review,rating);
+    setReviews([...reviews],review)
+    setRatings(rating)
+    
+
+  }
     const itemData=useLoaderData();
     const {id}=useParams();
-    console.log(id);
     const singleService= itemData.find(item=> item.id == id)
-    console.log(singleService);
     const {banner,
         description,
         name,
@@ -17,13 +27,20 @@ const SubscriptionDetails = () => {
         features,
         tech_category}=singleService
     return (
-        <div className="card my-20 mx-auto bg-base-100 w-96 shadow-sm">
-            
-  <figure>
-    <img
+        <div className="card flex flex-row my-20 mx-auto bg-base-100 w-8/12 shadow-sm">
+       <div>
+       <figure>
+    <img className='w-[400px] mb-10'
       src={thumbnail}
       alt="service" />
   </figure>
+  <form onSubmit={handleReview}>
+    <input className='p-3' name='review' type="text" placeholder='review'/>
+    <input className='p-3' name='rating' type="text" placeholder='rating'/>
+    <button className='btn btn-accent'>Submit</button>
+  </form>
+        </div>     
+  
   <div className="card-body">
     <h2 className="card-title">
       {name}
@@ -60,7 +77,19 @@ const SubscriptionDetails = () => {
       <button className='btn btn-soft btn-accent'>Subscribe Now</button>
       
     </div>
+    
   </div>
+  <div>
+    <div>
+    <h1>reviews</h1>
+    <h1>{console.log(reviews)}</h1>
+    </div>
+      <div>
+        <h2>ratings</h2>
+        <h1>{rating}</h1>
+      </div>
+
+    </div>
 </div>
     );
 };
