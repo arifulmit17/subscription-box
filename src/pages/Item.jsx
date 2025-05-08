@@ -5,7 +5,7 @@ import { AuthContext } from '../Contexts/AuthContext';
 const Item = ({item}) => {
   
     
-    const {id,name,banner,tech_category,price,ratings}=item
+    const {id,name,banner,tech_category,frequency,price,ratings}=item
     return (
 
         <div className="card w-96 bg-base-100 shadow-sm">
@@ -18,6 +18,8 @@ const Item = ({item}) => {
       
     </div>
    <h1>Ratings: <span className="text-lg">{ratings}</span></h1> 
+   <h1>Frequency: <span className="text-lg">{frequency}</span></h1> 
+
     
     <div className="mt-6">
     <NavLink to={`/SubscriptionDetails/${id}`}>

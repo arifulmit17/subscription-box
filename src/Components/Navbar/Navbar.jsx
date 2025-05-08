@@ -22,10 +22,14 @@ const Navbar = () => {
     {!user && <>
       <li><NavLink to={'/login'}>Login</NavLink></li>
     </> }
+    
     <li><NavLink to={'/register'}>Register</NavLink></li>
     {user && <>
       <li><NavLink to={'/userprofile'}>Profile</NavLink></li>
     </> } 
+    
+      <li><NavLink to={'/blogs'}>Blogs</NavLink></li>
+    
     
     </>
     return (

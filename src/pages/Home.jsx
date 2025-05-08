@@ -68,6 +68,7 @@ const Home = () => {
         </SwiperSlide>
       </Swiper>
             </div>
+            <h1 className='text-center text-3xl font-bold my-5'>Subscription Services</h1>
             <div className='w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             
             <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>

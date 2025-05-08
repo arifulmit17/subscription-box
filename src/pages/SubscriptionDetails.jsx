@@ -29,6 +29,10 @@ const SubscriptionDetails = () => {
         subscription_benefits,
         thumbnail,
         features,
+        price,
+        frequency,
+        ratings,
+        number_of_reviews,
         tech_category}=singleService
     return (
         <div className="card flex flex-row my-20 mx-auto bg-base-100 w-11/12 shadow-sm">
@@ -38,14 +42,22 @@ const SubscriptionDetails = () => {
       src={thumbnail}
       alt="service" />
   </figure>
+  <div className='m-5 flex justify-between'>
+    <h1>Price: {price}</h1>
+    <h1>Frequency: {frequency}</h1>
+    <h1>Ratings: {ratings}</h1>
+  </div>
+  <div className='m-5 '>
+      <h1>Number_of_reviews: {number_of_reviews}</h1>
+  </div>
   <form onSubmit={handleReview}>
-    <h1 className='ml-4' >Give your review:</h1>
-    <input className='p-3 w-full' name='review' type="text" placeholder='review'/>
+    <h1 className='ml-5' >Give your review:</h1>
+    <input className='ml-5 p-3 w-full' name='review' type="text" placeholder='review'/>
     <br />
-    <h1 className='ml-4'>Give your rating:</h1>
+    <h1 className='ml-5'>Give your rating:</h1>
     <input
   type="number"
-  className="input validator w-full"
+  className="ml-5 input validator w-full"
   required
   placeholder="Type a number between 1 to 5"
   min="1"

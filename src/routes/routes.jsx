@@ -7,6 +7,7 @@ import ErrorPage from "../pages/ErrorPage";
 import SubscriptionDetails from "../pages/SubscriptionDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import UserProfile from "../pages/UserProfile";
+import Blogs from "../pages/Blogs";
 
 const router=createBrowserRouter([
     {
@@ -41,6 +42,12 @@ const router=createBrowserRouter([
         element: <PrivateRoutes>
             <UserProfile></UserProfile>
         </PrivateRoutes>
+    },
+    {
+        path:'/blogs',
+        element: <PrivateRoutes>
+           <Blogs></Blogs>
+        </PrivateRoutes>        
     },
     {
         path: '/*',
