@@ -35,10 +35,10 @@ const SubscriptionDetails = () => {
         number_of_reviews,
         tech_category}=singleService
     return (
-        <div className="card flex flex-row my-20 mx-auto bg-base-100 w-11/12 shadow-sm">
-    <div className='w-4/12'>
+        <div className="card flex lg:flex-row my-20 mx-auto bg-base-100 w-11/12 shadow-sm">
+    <div className='w-full lg:w-4/12'>
     <figure>
-    <img className='w-[300px] mb-10'
+    <img className='w-[600x] lg:w-[300px] mb-10'
       src={thumbnail}
       alt="service" />
   </figure>
@@ -70,7 +70,7 @@ const SubscriptionDetails = () => {
   </form>
         </div>     
   
-  <div className="card-body w-4/12">
+  <div className="card-body w-full lg:w-4/12">
     <h2 className="card-title">
       {name}
       <div className="badge badge-neutral badge-outline">{tech_category}</div>
@@ -108,7 +108,7 @@ const SubscriptionDetails = () => {
     </div>
     
   </div>
-  <div className='w-4/12 bg-base-200 rounded-2xl'>
+  <div className='w-full lg:w-4/12 bg-base-200 rounded-2xl'>
     <div className='h-1/3 m-5 ' >
     <h1>reviews</h1>
     <ul  className='h-full overflow-scroll'>
