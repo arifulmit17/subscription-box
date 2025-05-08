@@ -92,14 +92,14 @@ const SubscriptionDetails = () => {
     
   </div>
   <div className='w-4/12 bg-base-200 rounded-2xl'>
-    <div className='h-1/2 m-5' >
+    <div className='h-1/3 m-5 overflow-scroll' >
     <h1>reviews</h1>
     <ul>
       {reviews.map(review=><li className='bg-white p-2'>{review}</li>)}
       </ul>
     </div>
       
-    <div className='h-1/2 m-5 bg-base-200'>
+    <div className='h-1/3 m-5 bg-base-200'>
         <h2>ratings</h2>
         <ul className='h-1/2'>
         {rating.map(rate=><li className='bg-white p-2 flex'>{rate} <FaRegStar />

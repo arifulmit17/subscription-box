@@ -41,9 +41,9 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <div className='flex'>
+    <div className='flex gap-1'>
       <img src={'sub.png'} alt="" />
-    <a className="btn btn-ghost text-xl">Subscription-box</a>
+      <h1 className=" text-2xl font-bold">Subscription-box</h1>
     </div>
     
   </div>
