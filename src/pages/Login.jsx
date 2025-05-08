@@ -17,6 +17,7 @@ const Login = () => {
 		signInWithPopup(auth,provider).then(result=>{
 			console.log(result);
 			swal('signin successful')
+			navigate('/')
 			
 		}).catch(error=>{
 			console.log(error);

@@ -85,7 +85,7 @@ const Register = () => {
                 <div className='relative'>
                 <input type={showpassword ? 'text' : 'password'} name='password' required placeholder="Password" minLength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" className="input w-full" />
                 
-                <button onClick={()=>{setShowpassword(!showpassword)}} className='btn btn-xs absolute right-4 '>
+                <button onClick={()=>{setShowpassword(!showpassword)}} className='btn btn-xs absolute bottom-2 right-4 '>
                 {
                 showpassword ? <FaEyeSlash /> : <FaEye />
                 }
