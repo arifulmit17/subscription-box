@@ -51,7 +51,7 @@ const Login = () => {
         	</Helmet>
 	<h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
 	<p className="text-sm text-center dark:text-gray-600">Dont have account?
-		<NavLink to={'/register'} className="focus:underline hover:underline"> Register here</NavLink>
+		<NavLink to={'/register'} className="focus:underline hover:underline font-bold"> Register here</NavLink>
 	</p>
 	<div className="my-6 space-y-4">
 		<button onClick={handleGoogleSignIn} aria-label="Login with Google" type="button" className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600">

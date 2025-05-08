@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { FaRegStar } from "react-icons/fa";
-
+import swal from 'sweetalert';
 const SubscriptionDetails = () => {
   const [reviews,setReviews]=useState([])
   const [rating,setRatings]=useState([])
+
+  const handleSubscription=()=>{
+    swal('Subscribed successfully !' )
+  }
+  
   const handleReview=(e)=>{
     e.preventDefault();
     const review=e.target.review.value;
@@ -86,7 +91,7 @@ const SubscriptionDetails = () => {
     </div>
     
     <div className="card-actions justify-end">
-      <button className='btn bg-gray-400 text-white'>Subscribe Now</button>
+      <button onClick={handleSubscription} className='btn bg-gray-400 text-white'>Subscribe Now</button>
       
     </div>
     

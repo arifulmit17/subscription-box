@@ -52,7 +52,7 @@ const Register = () => {
 
     return (
       
-        <div className='max-w-sm rounded-2xl mx-auto my-12'>
+        <div className='max-w-sm rounded-2xl mx-auto'>
           <Helmet>
             <title>Subscription-box | Register</title>
         </Helmet>
@@ -97,7 +97,7 @@ const Register = () => {
         <br />
         <button type='submit' className='btn text-white w-full bg-gray-400'>Submit</button>
             </form>
-        <h1 className='text-center font-bold'>Already registered, go to <NavLink to={'/login'} className={'text-blue-400'}> login</NavLink></h1>
+        <h1 className='text-center font-bold'>Already registered, go to <NavLink to={'/login'} className={'font-bold hover:underline'}> login page</NavLink></h1>
         </div>
     );
 };

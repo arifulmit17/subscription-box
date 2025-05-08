@@ -8,5 +8,5 @@
   
   .myDIV:hover + .hide {
     display: block;
-    color: black;
+    color: white;
   }
