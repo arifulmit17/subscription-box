@@ -30,7 +30,7 @@ const Blogs = () => {
                     <div className='w-full md:w-full lg:w-1/4'>
                         <img className='w-[600px] lg:w-[300px]' src={amazon} alt="" />
                     </div>
-                    <div>
+                    <div className='w-full'>
                     <div className='w-full h-[100px] overflow-scroll'>
                         <h1 className='text-xl font-bold'>Celebrate the Upcoming Premiere of Amazon Original Series</h1>
                         <p>To celebrate the upcoming premiere of the new video game anthology series Secret Level, streaming exclusively on Prime Video from December 10, Prime members can claim a variety of games from some of the franchises that feature in the show, and Prime members in the United States can also take advantage of several retail deals associated with games featured in Secret Level..
