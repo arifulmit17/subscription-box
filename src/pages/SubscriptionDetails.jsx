@@ -16,7 +16,7 @@ const SubscriptionDetails = () => {
     const reviewRating=e.target.rating.value;
     console.log(review,reviewRating);
     setReviews([...reviews,review])
-    setRatings([...reviewRating,rating])
+    setRatings([...rating,reviewRating])
     
 
   }
@@ -109,16 +109,16 @@ const SubscriptionDetails = () => {
     
   </div>
   <div className='w-4/12 bg-base-200 rounded-2xl'>
-    <div className='h-1/3 m-5 overflow-scroll' >
+    <div className='h-1/3 m-5 ' >
     <h1>reviews</h1>
-    <ul>
+    <ul  className='h-full overflow-scroll'>
       {reviews.map(review=><li className='bg-white p-2'>{review}</li>)}
       </ul>
     </div>
       
-    <div className='h-1/3 m-5 bg-base-200'>
+    <div className='h-1/3 m-5 '>
         <h2>ratings</h2>
-        <ul className='h-1/2'>
+        <ul className='h-full overflow-scroll'>
         {rating.map(rate=><li className='bg-white p-2 flex'>{rate} <FaRegStar />
           </li>)}
         </ul>
