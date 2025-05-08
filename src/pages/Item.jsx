@@ -20,7 +20,7 @@ const Item = ({item}) => {
    <h1>Ratings: <span className="text-lg">{ratings}</span></h1> 
     
     <div className="mt-6">
-      <button className="btn bg-gray-400 btn-block"><NavLink to={`/SubscriptionDetails/${id}`}>View More</NavLink> </button>
+      <button className="btn text-white bg-gray-400 btn-block"><NavLink to={`/SubscriptionDetails/${id}`}>View More</NavLink> </button>
     </div>
   </div>
 </div>

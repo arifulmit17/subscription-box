@@ -29,7 +29,7 @@ const Navbar = () => {
     
     </>
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar text-white bg-gray-400 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -65,7 +65,7 @@ const Navbar = () => {
         <div className="hide">{user.displayName}</div>
         
         </div>
-      <a onClick={handleLogout} className='btn'>Log out</a>
+      <a onClick={handleLogout} className='btn bg-white'>Log out</a>
     </> : <NavLink to={'/login'}>Login</NavLink>}
   </div>
 </div>

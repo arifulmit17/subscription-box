@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../Firebase.init';
 import swal from 'sweetalert';
+
 const Register = () => {
     const navigate=useNavigate();
     const {createUser,updateUser,setUser,user}=use(AuthContext)
@@ -57,7 +58,7 @@ const Register = () => {
         </Helmet>
           <h1 className='font-bold text-4xl my-5'>Please,Register Now !</h1>
 
-            <form className='space-y-4' onSubmit={handleRegister} >
+            <form className='' onSubmit={handleRegister} >
 
               {/* Google Login */}
               <div className="my-6 space-y-4">
@@ -89,23 +90,14 @@ const Register = () => {
                 showpassword ? <FaEyeSlash /> : <FaEye />
                 }
                 </button>
-                
-                
-                
+                   
                 </div>
               
-                
-              
-              
- 
-  
-
-        
         {/* Submit */}
         <br />
         <button type='submit' className='btn text-white w-full bg-gray-400'>Submit</button>
             </form>
-        <h1>Already registered, go to <NavLink to={'/login'} className={'text-blue-400'}> login</NavLink></h1>
+        <h1 className='text-center font-bold'>Already registered, go to <NavLink to={'/login'} className={'text-blue-400'}> login</NavLink></h1>
         </div>
     );
 };

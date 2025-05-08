@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { FaRegStar } from "react-icons/fa";
 
 const SubscriptionDetails = () => {
   const [reviews,setReviews]=useState([])
@@ -33,18 +34,29 @@ const SubscriptionDetails = () => {
       alt="service" />
   </figure>
   <form onSubmit={handleReview}>
-    <input className='p-3' name='review' type="text" placeholder='review'/>
+    <h1 className='ml-4' >Give your review:</h1>
+    <input className='p-3 w-full' name='review' type="text" placeholder='review'/>
     <br />
-    <input className='p-3' name='rating' type="text" placeholder='rating'/>
+    <h1 className='ml-4'>Give your rating:</h1>
+    <input
+  type="number"
+  className="input validator w-full"
+  required
+  placeholder="Type a number between 1 to 5"
+  min="1"
+  max="5"
+  name='rating'
+/>
+    {/* <input className='p-3'  type="text" placeholder='rating'/> */}
     <br />
-    <button className='btn btn-accent'>Submit</button>
+    <button className='btn w-full my-3 bg-gray-400 text-white flex items-center'>Submit</button>
   </form>
         </div>     
   
   <div className="card-body w-4/12">
     <h2 className="card-title">
       {name}
-      <div className="badge badge-soft badge-accent">{tech_category}</div>
+      <div className="badge badge-neutral badge-outline">{tech_category}</div>
     </h2>
 
     <p>{description}</p>
@@ -74,23 +86,24 @@ const SubscriptionDetails = () => {
     </div>
     
     <div className="card-actions justify-end">
-      <button className='btn btn-soft btn-accent'>Subscribe Now</button>
+      <button className='btn bg-gray-400 text-white'>Subscribe Now</button>
       
     </div>
     
   </div>
-  <div className='w-4/12 bg-base-200'>
-    <div className='h-1/2 ' >
+  <div className='w-4/12 bg-base-200 rounded-2xl'>
+    <div className='h-1/2 m-5' >
     <h1>reviews</h1>
     <ul>
       {reviews.map(review=><li className='bg-white p-2'>{review}</li>)}
       </ul>
     </div>
       
-    <div className='h-1/2 bg-base-200'>
+    <div className='h-1/2 m-5 bg-base-200'>
         <h2>ratings</h2>
-        <ul className='h-1/2 '>
-        {rating.map(rate=><li>rating: {rate}</li>)}
+        <ul className='h-1/2'>
+        {rating.map(rate=><li className='bg-white p-2 flex'>{rate} <FaRegStar />
+          </li>)}
         </ul>
       </div>
     </div>
