@@ -8,6 +8,8 @@ Project description:Our site focuses to facilitate users to avail diverse subscr
 
 Guidance: Browse to the live site link and follow the f.a.q section in home page. for server info go the server repo link provided below.
 
+Technologies used: React.js, React-router, Tailwind Css, Firebase , Daisy-UI
+
 Features:
 <ul>
   <li>For users there is opportunity to choose from 6 different streaming platforms. </li>
